@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-from elmer.Model import *
-from elmer.View import *
+from mycode.Model import *
+from mycode.View import *
 from tkinter import messagebox
 
 
