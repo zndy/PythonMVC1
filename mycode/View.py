@@ -6,7 +6,6 @@ class View(Frame):
     def __init__(self):
         self.canvasFrame = Frame("")
         self.canvasFrame.grid(row=0, column=0)
-
         self.inputValueFrame = Frame("")
         self.inputValueFrame.grid(row=1, column=0)
 
@@ -17,17 +16,17 @@ class View(Frame):
 
         self.calcButton = Button(self.inputValueFrame, text="calc", bg="yellow", fg="red")
 
-        self.createCanvasFrame()
-        self.createInputValueFrame()
+        self.__createCanvasFrame()
+        self.__createInputValueFrame()
 
-    def createInputValueFrame(self):
+    def __createInputValueFrame(self):
         Label(self.inputValueFrame, textvariable=self.label_text).grid(row=0, column=0, columnspan=1)
         entry = Entry(self.inputValueFrame, textvariable=self.entry_text)
         entry.grid(row=0, column=1, columnspan=3)
         entry.focus()
         self.calcButton.grid(row=1, column=0)
 
-    def createCanvasFrame(self):
+    def __createCanvasFrame(self):
         w = Canvas(self.canvasFrame, width=200, height=100)
         w.grid(row=2, column=2, columnspan=4)
         w.create_line(0, 0, 200, 100)
