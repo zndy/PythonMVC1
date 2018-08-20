@@ -11,9 +11,11 @@ class Controller2:
         self.view.addCalcBtnListener(self.calcButtonPressed)
 
     def calcButtonPressed(self, event):
-        self.model.setAngle(self.view.entry_text.get())
-        print("result = " + str(self.model.calc()))
-        messagebox.showinfo('Message title', str(self.model.calc()))
+        self.model.setAngle(self.view.angleEntry.get())
+        self.model.setPa1(self.view.pa1Entry.get())
+        self.model.setPa2(self.view.pa2Entry.get())
+        print("result = " + self.model.calc())
+        messagebox.showinfo('Message title', self.model.calc())
 
 
 def main():
